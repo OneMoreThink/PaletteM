@@ -10,6 +10,8 @@
 		AF8F625A2C9135AA00D6E8E2 /* PaletteMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62592C9135AA00D6E8E2 /* PaletteMApp.swift */; };
 		AF8F625C2C9135AA00D6E8E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F625B2C9135AA00D6E8E2 /* ContentView.swift */; };
 		AF8F625E2C9135AC00D6E8E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8F625D2C9135AC00D6E8E2 /* Assets.xcassets */; };
+		AF8F626F2C91544300D6E8E2 /* ColorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F626E2C91544300D6E8E2 /* ColorInfo.swift */; };
+		AF8F62712C91551700D6E8E2 /* ColorExtractorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62702C91551700D6E8E2 /* ColorExtractorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,8 @@
 		AF8F62592C9135AA00D6E8E2 /* PaletteMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteMApp.swift; sourceTree = "<group>"; };
 		AF8F625B2C9135AA00D6E8E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF8F625D2C9135AC00D6E8E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF8F626E2C91544300D6E8E2 /* ColorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfo.swift; sourceTree = "<group>"; };
+		AF8F62702C91551700D6E8E2 /* ColorExtractorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtractorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +54,44 @@
 			isa = PBXGroup;
 			children = (
 				AF8F62592C9135AA00D6E8E2 /* PaletteMApp.swift */,
-				AF8F625B2C9135AA00D6E8E2 /* ContentView.swift */,
+				AF8F62672C91524300D6E8E2 /* Model */,
+				AF8F626A2C91528200D6E8E2 /* Manager */,
+				AF8F62692C91525400D6E8E2 /* View */,
+				AF8F62682C91524B00D6E8E2 /* ViewModel */,
 				AF8F625D2C9135AC00D6E8E2 /* Assets.xcassets */,
 			);
 			path = PaletteM;
+			sourceTree = "<group>";
+		};
+		AF8F62672C91524300D6E8E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F626E2C91544300D6E8E2 /* ColorInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF8F62682C91524B00D6E8E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F62702C91551700D6E8E2 /* ColorExtractorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF8F62692C91525400D6E8E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F625B2C9135AA00D6E8E2 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF8F626A2C91528200D6E8E2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8F626F2C91544300D6E8E2 /* ColorInfo.swift in Sources */,
 				AF8F625C2C9135AA00D6E8E2 /* ContentView.swift in Sources */,
 				AF8F625A2C9135AA00D6E8E2 /* PaletteMApp.swift in Sources */,
+				AF8F62712C91551700D6E8E2 /* ColorExtractorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
