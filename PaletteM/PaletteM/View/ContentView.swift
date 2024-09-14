@@ -18,17 +18,30 @@ struct ContentView: View {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 300)
+                    
             } else {
                 Text("선택한 이미지가 없습니다.")
                     .frame(height: 200)
+            }
+            
+            if let detectedImage = viewModel.imageWithDetectedObjects {
+                Image(uiImage: detectedImage)
+                    .resizable()
+                    .scaledToFit()
+                    
+                    
+                
+            } else if viewModel.isProcessing {
+                ProgressView("Processing image...")
+            } else {
+                Text("No image selected")
             }
             
             Button("Select Sample Image") {
                 // 여기서 샘플 이미지를 선택합니다.
                 // 실제 앱에서는 PHPickerViewController를 사용할 수 있습니다.
                 // 또는 camera를 이용해 사진을 찍는 로직
-                if let sampleImage = UIImage(named: "sample_image") {
+                if let sampleImage = UIImage(named: "sample_person2") {
                     viewModel.selectImage(sampleImage)
                 }
             }
