@@ -12,6 +12,9 @@
 		AF8F625E2C9135AC00D6E8E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8F625D2C9135AC00D6E8E2 /* Assets.xcassets */; };
 		AF8F626F2C91544300D6E8E2 /* ColorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F626E2C91544300D6E8E2 /* ColorInfo.swift */; };
 		AF8F62712C91551700D6E8E2 /* ColorExtractorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62702C91551700D6E8E2 /* ColorExtractorViewModel.swift */; };
+		AF8F62732C9163CF00D6E8E2 /* DetectedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62722C9163CF00D6E8E2 /* DetectedObject.swift */; };
+		AF8F62752C9165EA00D6E8E2 /* ObjectDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62742C9165EA00D6E8E2 /* ObjectDetectionManager.swift */; };
+		AF8F62772C93C27D00D6E8E2 /* YOLOv3Int8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62762C93C27D00D6E8E2 /* YOLOv3Int8LUT.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		AF8F625D2C9135AC00D6E8E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF8F626E2C91544300D6E8E2 /* ColorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfo.swift; sourceTree = "<group>"; };
 		AF8F62702C91551700D6E8E2 /* ColorExtractorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtractorViewModel.swift; sourceTree = "<group>"; };
+		AF8F62722C9163CF00D6E8E2 /* DetectedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedObject.swift; sourceTree = "<group>"; };
+		AF8F62742C9165EA00D6E8E2 /* ObjectDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionManager.swift; sourceTree = "<group>"; };
+		AF8F62762C93C27D00D6E8E2 /* YOLOv3Int8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Int8LUT.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 		AF8F624D2C9135AA00D6E8E2 = {
 			isa = PBXGroup;
 			children = (
+				AF8F62762C93C27D00D6E8E2 /* YOLOv3Int8LUT.mlmodel */,
 				AF8F62582C9135AA00D6E8E2 /* PaletteM */,
 				AF8F62572C9135AA00D6E8E2 /* Products */,
 			);
@@ -67,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				AF8F626E2C91544300D6E8E2 /* ColorInfo.swift */,
+				AF8F62722C9163CF00D6E8E2 /* DetectedObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +98,7 @@
 		AF8F626A2C91528200D6E8E2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				AF8F62742C9165EA00D6E8E2 /* ObjectDetectionManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -163,9 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8F62752C9165EA00D6E8E2 /* ObjectDetectionManager.swift in Sources */,
 				AF8F626F2C91544300D6E8E2 /* ColorInfo.swift in Sources */,
 				AF8F625C2C9135AA00D6E8E2 /* ContentView.swift in Sources */,
 				AF8F625A2C9135AA00D6E8E2 /* PaletteMApp.swift in Sources */,
+				AF8F62772C93C27D00D6E8E2 /* YOLOv3Int8LUT.mlmodel in Sources */,
+				AF8F62732C9163CF00D6E8E2 /* DetectedObject.swift in Sources */,
 				AF8F62712C91551700D6E8E2 /* ColorExtractorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
