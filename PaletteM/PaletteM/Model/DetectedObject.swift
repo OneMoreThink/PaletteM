@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RecognizedObject: Identifiable {
+struct DetectedObject: Identifiable {
     let id: String = UUID().uuidString
     let label: String
     let boundingBox: CGRect
