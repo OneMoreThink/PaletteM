@@ -15,6 +15,10 @@
 		AF8F62732C9163CF00D6E8E2 /* DetectedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62722C9163CF00D6E8E2 /* DetectedObject.swift */; };
 		AF8F62752C9165EA00D6E8E2 /* ObjectDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62742C9165EA00D6E8E2 /* ObjectDetectionManager.swift */; };
 		AF8F62772C93C27D00D6E8E2 /* YOLOv3Int8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62762C93C27D00D6E8E2 /* YOLOv3Int8LUT.mlmodel */; };
+		AF8F62792C95E35900D6E8E2 /* ColorExtractionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62782C95E35900D6E8E2 /* ColorExtractionManager.swift */; };
+		AF8F627C2C95E3C500D6E8E2 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F627B2C95E3C500D6E8E2 /* UIImage+Extensions.swift */; };
+		AF8F627E2C95EA1B00D6E8E2 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F627D2C95EA1B00D6E8E2 /* Color+Extensions.swift */; };
+		AF8F62802C95EAA500D6E8E2 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F627F2C95EAA500D6E8E2 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		AF8F62722C9163CF00D6E8E2 /* DetectedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedObject.swift; sourceTree = "<group>"; };
 		AF8F62742C9165EA00D6E8E2 /* ObjectDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionManager.swift; sourceTree = "<group>"; };
 		AF8F62762C93C27D00D6E8E2 /* YOLOv3Int8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Int8LUT.mlmodel; sourceTree = "<group>"; };
+		AF8F62782C95E35900D6E8E2 /* ColorExtractionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtractionManager.swift; sourceTree = "<group>"; };
+		AF8F627B2C95E3C500D6E8E2 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		AF8F627D2C95EA1B00D6E8E2 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		AF8F627F2C95EAA500D6E8E2 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 		AF8F62672C91524300D6E8E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF8F627A2C95E39000D6E8E2 /* Helper */,
 				AF8F626E2C91544300D6E8E2 /* ColorInfo.swift */,
 				AF8F62722C9163CF00D6E8E2 /* DetectedObject.swift */,
 			);
@@ -99,8 +108,19 @@
 			isa = PBXGroup;
 			children = (
 				AF8F62742C9165EA00D6E8E2 /* ObjectDetectionManager.swift */,
+				AF8F62782C95E35900D6E8E2 /* ColorExtractionManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		AF8F627A2C95E39000D6E8E2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F627B2C95E3C500D6E8E2 /* UIImage+Extensions.swift */,
+				AF8F627D2C95EA1B00D6E8E2 /* Color+Extensions.swift */,
+				AF8F627F2C95EAA500D6E8E2 /* UIColor+Extensions.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +194,13 @@
 			files = (
 				AF8F62752C9165EA00D6E8E2 /* ObjectDetectionManager.swift in Sources */,
 				AF8F626F2C91544300D6E8E2 /* ColorInfo.swift in Sources */,
+				AF8F62792C95E35900D6E8E2 /* ColorExtractionManager.swift in Sources */,
 				AF8F625C2C9135AA00D6E8E2 /* ContentView.swift in Sources */,
 				AF8F625A2C9135AA00D6E8E2 /* PaletteMApp.swift in Sources */,
+				AF8F627E2C95EA1B00D6E8E2 /* Color+Extensions.swift in Sources */,
 				AF8F62772C93C27D00D6E8E2 /* YOLOv3Int8LUT.mlmodel in Sources */,
+				AF8F62802C95EAA500D6E8E2 /* UIColor+Extensions.swift in Sources */,
+				AF8F627C2C95E3C500D6E8E2 /* UIImage+Extensions.swift in Sources */,
 				AF8F62732C9163CF00D6E8E2 /* DetectedObject.swift in Sources */,
 				AF8F62712C91551700D6E8E2 /* ColorExtractorViewModel.swift in Sources */,
 			);
