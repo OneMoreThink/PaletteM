@@ -107,6 +107,7 @@
 		AF8F62692C91525400D6E8E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF8F628D2C97043500D6E8E2 /* Component */,
 				AF8F625B2C9135AA00D6E8E2 /* ContentView.swift */,
 				AF8F62832C96B0A900D6E8E2 /* PhotoFrameView.swift */,
 				AF8F628B2C96D3A700D6E8E2 /* ImageDataListView.swift */,
@@ -149,6 +150,13 @@
 				AF8F62892C96D31200D6E8E2 /* PreviewContainer.swift */,
 			);
 			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		AF8F628D2C97043500D6E8E2 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
