@@ -27,9 +27,11 @@ struct FlipCard: View {
                 )
                 .animation(isFlipped ? .linear : .linear.delay(0.35), value: isFlipped)
         }
-        .clipShape(RoundedRectangle(cornerRadius: 25))
-        .shadow(color: .gray.opacity(0.5), radius: 5, x: 5, y: 0)
-        .frame(maxWidth: 300)
+        .clipShape(RoundedRectangle(cornerRadius: 15))
+        .shadow(color: .gray.opacity(0.2), radius: 5, x: 5, y: 5)
+        .shadow(color: .gray.opacity(0.15), radius: 5, x: -2, y: -3)
+        .shadow(color: .white.opacity(0.3), radius: 2)
+        .frame(maxWidth: 320)
         .frame(maxHeight: 550)
         .padding(.vertical)
         .onTapGesture {

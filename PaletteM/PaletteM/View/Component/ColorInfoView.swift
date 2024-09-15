@@ -18,7 +18,7 @@ struct ColorInfoView: View {
             Rectangle()
                 .fill(.white)
                 .overlay{
-                    VStack{
+                    VStack(alignment: .leading){
                         ForEach(colors) { color in
                             ColorInfoCardView(colorInfo: color)
                                 .padding(.vertical)

@@ -22,7 +22,6 @@
 		AF8F62842C96B0A900D6E8E2 /* PhotoFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62832C96B0A900D6E8E2 /* PhotoFrameView.swift */; };
 		AF8F62882C96CDF800D6E8E2 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62872C96CDF800D6E8E2 /* ImageData.swift */; };
 		AF8F628A2C96D31200D6E8E2 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62892C96D31200D6E8E2 /* PreviewContainer.swift */; };
-		AF8F628C2C96D3A700D6E8E2 /* ImageDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F628B2C96D3A700D6E8E2 /* ImageDataListView.swift */; };
 		AF8F628F2C97048C00D6E8E2 /* FlipCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F628E2C97048C00D6E8E2 /* FlipCard.swift */; };
 		AF8F62912C9707E500D6E8E2 /* ColorInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62902C9707E500D6E8E2 /* ColorInfoView.swift */; };
 		AF8F62932C97083C00D6E8E2 /* ColorInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62922C97083C00D6E8E2 /* ColorInfoCardView.swift */; };
@@ -46,7 +45,6 @@
 		AF8F62832C96B0A900D6E8E2 /* PhotoFrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFrameView.swift; sourceTree = "<group>"; };
 		AF8F62872C96CDF800D6E8E2 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		AF8F62892C96D31200D6E8E2 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
-		AF8F628B2C96D3A700D6E8E2 /* ImageDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataListView.swift; sourceTree = "<group>"; };
 		AF8F628E2C97048C00D6E8E2 /* FlipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCard.swift; sourceTree = "<group>"; };
 		AF8F62902C9707E500D6E8E2 /* ColorInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfoView.swift; sourceTree = "<group>"; };
 		AF8F62922C97083C00D6E8E2 /* ColorInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfoCardView.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				AF8F62952C970E1F00D6E8E2 /* StackView.swift */,
 				AF8F628D2C97043500D6E8E2 /* Component */,
 				AF8F625B2C9135AA00D6E8E2 /* ContentView.swift */,
-				AF8F628B2C96D3A700D6E8E2 /* ImageDataListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,7 +251,6 @@
 				AF8F627C2C95E3C500D6E8E2 /* UIImage+Extensions.swift in Sources */,
 				AF8F62732C9163CF00D6E8E2 /* DetectedObject.swift in Sources */,
 				AF8F62932C97083C00D6E8E2 /* ColorInfoCardView.swift in Sources */,
-				AF8F628C2C96D3A700D6E8E2 /* ImageDataListView.swift in Sources */,
 				AF8F62712C91551700D6E8E2 /* ColorExtractorViewModel.swift in Sources */,
 				AF8F628A2C96D31200D6E8E2 /* PreviewContainer.swift in Sources */,
 				AF8F628F2C97048C00D6E8E2 /* FlipCard.swift in Sources */,

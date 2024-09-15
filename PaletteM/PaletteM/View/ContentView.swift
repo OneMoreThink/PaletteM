@@ -13,46 +13,44 @@ struct ContentView: View {
     @State private var showingAlert = false
     
     var body: some View {
-        VStack {
-            if let selectedImage = viewModel.selectedImage {
-                FlipCard(image: selectedImage, colors: viewModel.distinctColors)
-                    .clipShape(RoundedRectangle(cornerRadius: 25))
-                    .frame(maxWidth: 300)
-                    .frame(maxHeight: 550)
-                    .padding()
-                
-            } else if viewModel.isProcessing {
-                ProgressView("Processing image...")
-            } else {
-                RoundedRectangle(cornerRadius: 25.0)
-                    .fill(.gray.opacity(0.2))
-                    .frame(maxWidth: 300)
-                    .frame(maxHeight: 550)
-                    .padding()
-                    .overlay{
-                        Text("No Selected Image")
-                            .font(.title)
-                    }
-            }
+        
+        NavigationStack{
             
-            Button("Select Sample Image") {
-                // 여기서 샘플 이미지를 선택합니다.
-                // 실제 앱에서는 PHPickerViewController를 사용할 수 있습니다.
-                // 또는 camera를 이용해 사진을 찍는 로직
-                if let sampleImage = UIImage(named: "sample_person1") {
-                    viewModel.selectImage(sampleImage)
-                }
+            VStack{
+                StackView()
+                    
             }
-            .padding()
-            
-            Button("Reset Image") {
-                viewModel.resetImage()
-            }
-            .disabled(viewModel.selectedImage == nil)
+            .navigationTitle("PaletteM")
         }
+        
     }
+    
 }
 
 #Preview {
-    ContentView()
+    
+    let container = PreviewContainer(ImageData.self)
+    
+    let sampleImageData1 = UIImage(named: "sample_person1")?.pngData() ?? Data()
+    let sampleImage1 = ImageData(imageData: sampleImageData1, colorInfos: [
+        ColorInfo(color: .red, percentage: 0.3),
+        ColorInfo(color: .green, percentage: 0.5),
+        ColorInfo(color: .black, percentage: 0.2)
+    ])
+    let sampleImageData2 = UIImage(named: "sample_person2")?.pngData() ?? Data()
+    let sampleImage2 = ImageData(imageData: sampleImageData2, colorInfos: [
+        ColorInfo(color: .red, percentage: 0.3),
+        ColorInfo(color: .blue, percentage: 0.5),
+        ColorInfo(color: .yellow, percentage: 0.2)
+    ])
+    let sampleImageData3 = UIImage(named: "sample_person3")?.pngData() ?? Data()
+    let sampleImage3 = ImageData(imageData: sampleImageData3, colorInfos: [
+        ColorInfo(color: .orange, percentage: 0.3),
+        ColorInfo(color: .cyan, percentage: 0.5),
+        ColorInfo(color: .gray, percentage: 0.2)
+    ])
+    
+    container.addExamples([sampleImage1,sampleImage2,sampleImage3])
+    return  ContentView()
+        .modelContainer(container.container)
 }
