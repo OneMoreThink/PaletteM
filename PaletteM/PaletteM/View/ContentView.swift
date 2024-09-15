@@ -10,7 +10,6 @@ import SwiftUI
 // MARK: - View
 struct ContentView: View {
     @StateObject private var viewModel = ColorExtractorViewModel()
-    @State private var showingAlert = false
     
     var body: some View {
         
