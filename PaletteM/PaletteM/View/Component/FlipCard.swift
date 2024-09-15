@@ -27,6 +27,11 @@ struct FlipCard: View {
                 )
                 .animation(isFlipped ? .linear : .linear.delay(0.35), value: isFlipped)
         }
+        .clipShape(RoundedRectangle(cornerRadius: 25))
+        .shadow(color: .gray.opacity(0.5), radius: 5, x: 5, y: 0)
+        .frame(maxWidth: 300)
+        .frame(maxHeight: 550)
+        .padding(.vertical)
         .onTapGesture {
             withAnimation(.easeInOut){
                 isFlipped.toggle()

@@ -20,3 +20,12 @@ class ImageData {
         self.colorInfos = colorInfos
     }
 }
+
+extension [ImageData] {
+    func zIndex(_ item: ImageData) -> CGFloat {
+        if let index = firstIndex(where: { $0.id == item.id}){
+            return CGFloat(count) - CGFloat(index)
+        }
+        return .zero
+    }
+}

@@ -26,6 +26,7 @@
 		AF8F628F2C97048C00D6E8E2 /* FlipCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F628E2C97048C00D6E8E2 /* FlipCard.swift */; };
 		AF8F62912C9707E500D6E8E2 /* ColorInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62902C9707E500D6E8E2 /* ColorInfoView.swift */; };
 		AF8F62932C97083C00D6E8E2 /* ColorInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62922C97083C00D6E8E2 /* ColorInfoCardView.swift */; };
+		AF8F62962C970E1F00D6E8E2 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62952C970E1F00D6E8E2 /* StackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		AF8F628E2C97048C00D6E8E2 /* FlipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCard.swift; sourceTree = "<group>"; };
 		AF8F62902C9707E500D6E8E2 /* ColorInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfoView.swift; sourceTree = "<group>"; };
 		AF8F62922C97083C00D6E8E2 /* ColorInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfoCardView.swift; sourceTree = "<group>"; };
+		AF8F62952C970E1F00D6E8E2 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		AF8F62692C91525400D6E8E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF8F62952C970E1F00D6E8E2 /* StackView.swift */,
 				AF8F628D2C97043500D6E8E2 /* Component */,
 				AF8F625B2C9135AA00D6E8E2 /* ContentView.swift */,
 				AF8F628B2C96D3A700D6E8E2 /* ImageDataListView.swift */,
@@ -245,6 +248,7 @@
 				AF8F625A2C9135AA00D6E8E2 /* PaletteMApp.swift in Sources */,
 				AF8F627E2C95EA1B00D6E8E2 /* Color+Extensions.swift in Sources */,
 				AF8F62772C93C27D00D6E8E2 /* YOLOv3Int8LUT.mlmodel in Sources */,
+				AF8F62962C970E1F00D6E8E2 /* StackView.swift in Sources */,
 				AF8F62912C9707E500D6E8E2 /* ColorInfoView.swift in Sources */,
 				AF8F62802C95EAA500D6E8E2 /* UIColor+Extensions.swift in Sources */,
 				AF8F627C2C95E3C500D6E8E2 /* UIImage+Extensions.swift in Sources */,

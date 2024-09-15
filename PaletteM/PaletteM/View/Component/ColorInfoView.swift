@@ -12,13 +12,21 @@ struct ColorInfoView: View {
     let colors: [ColorInfo]
     
     var body: some View {
-        VStack(alignment: .leading){
-            ForEach(colors) { color in
-                ColorInfoCardView(colorInfo: color)
-                    .padding(.vertical)
-            }
+        GeometryReader{
+            let size = $0.size
+            
+            Rectangle()
+                .fill(.white)
+                .overlay{
+                    VStack{
+                        ForEach(colors) { color in
+                            ColorInfoCardView(colorInfo: color)
+                                .padding(.vertical)
+                        }
+                    }
+                }
         }
-        .frame(alignment: .bottomTrailing)
+        
     }
 }
 
