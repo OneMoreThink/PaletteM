@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct PaletteMApp: App {
@@ -13,5 +14,6 @@ struct PaletteMApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: ImageData.self)
     }
 }

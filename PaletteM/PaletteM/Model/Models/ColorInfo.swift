@@ -8,7 +8,7 @@
 import SwiftUI
 
 // MARK: - Model
-struct ColorInfo: Identifiable {
+struct ColorInfo: Identifiable, Codable {
     let id = UUID()
     let color: Color
     let percentage: Double
