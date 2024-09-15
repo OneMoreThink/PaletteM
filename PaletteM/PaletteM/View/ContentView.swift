@@ -15,9 +15,10 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if let selectedImage = viewModel.selectedImage {
-                PhotoFrameView(image: selectedImage, colors: viewModel.distinctColors)
+                FlipCard(image: selectedImage, colors: viewModel.distinctColors)
                     .clipShape(RoundedRectangle(cornerRadius: 25))
-                    .frame(maxHeight: 800)
+                    .frame(maxWidth: 300)
+                    .frame(maxHeight: 550)
                     .padding()
                 
             } else if viewModel.isProcessing {
@@ -25,7 +26,8 @@ struct ContentView: View {
             } else {
                 RoundedRectangle(cornerRadius: 25.0)
                     .fill(.gray.opacity(0.2))
-                    .frame(maxHeight: 700)
+                    .frame(maxWidth: 300)
+                    .frame(maxHeight: 550)
                     .padding()
                     .overlay{
                         Text("No Selected Image")
@@ -37,7 +39,7 @@ struct ContentView: View {
                 // 여기서 샘플 이미지를 선택합니다.
                 // 실제 앱에서는 PHPickerViewController를 사용할 수 있습니다.
                 // 또는 camera를 이용해 사진을 찍는 로직
-                if let sampleImage = UIImage(named: "sample_person2") {
+                if let sampleImage = UIImage(named: "sample_person1") {
                     viewModel.selectImage(sampleImage)
                 }
             }
