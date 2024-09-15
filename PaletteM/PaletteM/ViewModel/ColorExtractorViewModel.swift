@@ -21,9 +21,11 @@ class ColorExtractorViewModel: ObservableObject {
     @Published var detectionError: ObjectDetectionErorr?
     /// 객체가 감지된 이미지를 저장 ( for bounding box image)
     @Published var imageWithDetectedObjects: UIImage?
+    /// 제일 많이 등장한 색 중에 서로 제일 다른색들 뽑기
+    @Published var distinctColors: [ColorInfo] = []
     
     private let objectDetectionManager = ObjectDetectionManager.shared
-    
+    private let colorExtractionManager = ColorExtractionManager.shared
     
     
     /// 이미지 선택 메서드
@@ -31,7 +33,6 @@ class ColorExtractorViewModel: ObservableObject {
     func selectImage(_ image: UIImage) {
         selectedImage = image
         detectObjects(in: image)
-        extractColors(from: image)
     }
     
     /// 선택 이미지 초기화 메서드
@@ -51,30 +52,49 @@ class ColorExtractorViewModel: ObservableObject {
         objectDetectionManager.detectObject(in: image) { [weak self] result in
             
             DispatchQueue.main.async {
-                
-                self?.isProcessing = false
-                
                 switch result {
                 case .success(let objects):
                     self?.detectedObjects = objects
-                    
-                    // FIXME: debugging
-                    print("Detected \(objects.count) objects")
-                    for object in objects {
-                        print("Object: \(object.label), Bounding Box: \(object.boundingBox)")
-                    }
-                    
                     // MARK: 객체가 감지가 완료된 시점이후 박스 표시
                     self?.drawDetectedObjectsOnImage()
+                    
+                    // 객체가 감지가 완료된 이후에 색생 추출을 수행
+                    self?.extractColors(from: image)
                     
                 case .failure(let error):
                     self?.detectedObjects = []
                     self?.detectionError = error
+                    
+                    // 객체가 감지에 실패해도 색상 추출을 시도
+                    self?.extractColors(from: image)
                 }
+                self?.isProcessing = false
             }
         }
     }
     
+    /// 색상 추출 프로세스 구현
+    private func extractColors(from image: UIImage) {
+        isProcessing = true
+        
+        // 레이블별 가중치를 정의합니다.
+        let labelWeights: [String: Double] = [
+            // 필요한 레이블과 가중치를 추가
+            "person": 1.5,
+        ]
+        
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            guard let self = self else { return }
+            let colors = self.colorExtractionManager.extractColors(from: image, detectedObjects: self.detectedObjects, labelWeights: labelWeights)
+            
+            DispatchQueue.main.async {
+                self.extractedColors = colors
+                // 최대 구분색 추가
+                self.distinctColors = self.colorExtractionManager.selectDistinctColors(from: colors)
+                self.isProcessing = false
+            }
+        }
+    }
     
     private func drawDetectedObjectsOnImage() {
         guard let image = selectedImage else {
@@ -121,23 +141,6 @@ class ColorExtractorViewModel: ObservableObject {
         
         DispatchQueue.main.async {
             self.imageWithDetectedObjects = drawnImage
-        }
-    }
-    
-    /// 색상 추출 프로세스 구현
-    private func extractColors(from image: UIImage) {
-        isProcessing = true
-        // 여기에 색상 추출 로직을 구현합니다.
-        // 이 예시에서는 더미 데이터를 사용합니다.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.extractedColors = [
-                ColorInfo(color: .red, percentage: 30),
-                ColorInfo(color: .blue, percentage: 25),
-                ColorInfo(color: .green, percentage: 20),
-                ColorInfo(color: .yellow, percentage: 15),
-                ColorInfo(color: .purple, percentage: 10)
-            ]
-            self.isProcessing = false
         }
     }
 }
