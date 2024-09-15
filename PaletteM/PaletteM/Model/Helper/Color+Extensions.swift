@@ -40,4 +40,16 @@ extension Color: Codable {
         let opacity = try container.decode(CGFloat.self, forKey: .opacity)
         self.init(red: Double(red), green: Double(green), blue: Double(blue), opacity: Double(opacity))
     }
+    
+    /// Color를 HEX 문자열로 변환
+    func toHexString() -> String {
+        let uiColor = UIColor(self)
+        return uiColor.toHexString()
+    }
+    
+    /// Color를 RGB 문자열로 변환
+    func toRGBString() -> String {
+        let uiColor = UIColor(self)
+        return uiColor.toRGBString()
+    }
 }
