@@ -142,7 +142,7 @@ class ColorExtractionManager {
         
  
         /// 정렬된 색상 리스트에서 빈도와 거리를 고려하여 색상을 선택하는 메서드
-        func selectDistinctColors(from colors: [ColorInfo], count: Int = 5, distanceThreshold: Double = 80.0, frequencyThreshold: Double = 0.2) -> [ColorInfo] {
+        func selectDistinctColors(from colors: [ColorInfo], count: Int = 3, distanceThreshold: Double = 80.0, frequencyThreshold: Double = 0.2) -> [ColorInfo] {
             guard !colors.isEmpty else { return [] }
             
             // 빈도 임계값 이상인 색상만 필터링
