@@ -14,34 +14,30 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-//            if let image = viewModel.selectedImage {
-//                Image(uiImage: image)
-//                    .resizable()
-//                    .scaledToFit()
-//                    
-//            } else {
-//                Text("선택한 이미지가 없습니다.")
-//                    .frame(height: 200)
-//            }
-            
-            if let detectedImage = viewModel.imageWithDetectedObjects {
-                Image(uiImage: detectedImage)
-                    .resizable()
-                    .scaledToFit()
-                    
-                    
+            if let selectedImage = viewModel.selectedImage {
+                PhotoFrameView(image: selectedImage, colors: viewModel.distinctColors)
+                    .clipShape(RoundedRectangle(cornerRadius: 25))
+                    .frame(maxHeight: 800)
+                    .padding()
                 
             } else if viewModel.isProcessing {
                 ProgressView("Processing image...")
             } else {
-                Text("No image selected")
+                RoundedRectangle(cornerRadius: 25.0)
+                    .fill(.gray.opacity(0.2))
+                    .frame(maxHeight: 700)
+                    .padding()
+                    .overlay{
+                        Text("No Selected Image")
+                            .font(.title)
+                    }
             }
             
             Button("Select Sample Image") {
                 // 여기서 샘플 이미지를 선택합니다.
                 // 실제 앱에서는 PHPickerViewController를 사용할 수 있습니다.
                 // 또는 camera를 이용해 사진을 찍는 로직
-                if let sampleImage = UIImage(named: "sample_dog1") {
+                if let sampleImage = UIImage(named: "sample_person2") {
                     viewModel.selectImage(sampleImage)
                 }
             }
@@ -51,30 +47,6 @@ struct ContentView: View {
                 viewModel.resetImage()
             }
             .disabled(viewModel.selectedImage == nil)
-            
-            if viewModel.isProcessing {
-                ProgressView()
-            } else {
-                List(viewModel.extractedColors) { colorInfo in
-                    HStack {
-                        Rectangle()
-                            .fill(colorInfo.color)
-                            .frame(width: 50, height: 50)
-                        Text("\(colorInfo.percentage, specifier: "%.1f")%")
-                    }
-                }
-                
-                Divider()
-                
-                List(viewModel.distinctColors) { colorInfo in
-                    HStack {
-                        Rectangle()
-                            .fill(colorInfo.color)
-                            .frame(width: 50, height: 50)
-                        Text("\(colorInfo.percentage, specifier: "%.1f")%")
-                    }
-                }
-            }
         }
     }
 }
