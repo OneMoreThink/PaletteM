@@ -26,6 +26,16 @@
 		AF8F62912C9707E500D6E8E2 /* ColorInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62902C9707E500D6E8E2 /* ColorInfoView.swift */; };
 		AF8F62932C97083C00D6E8E2 /* ColorInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62922C97083C00D6E8E2 /* ColorInfoCardView.swift */; };
 		AF8F62962C970E1F00D6E8E2 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62952C970E1F00D6E8E2 /* StackView.swift */; };
+		AF8F62982C97372500D6E8E2 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62972C97372500D6E8E2 /* FloatingButton.swift */; };
+		AF8F629C2C97C74E00D6E8E2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F629B2C97C74E00D6E8E2 /* Photo.swift */; };
+		AF8F62A02C97F32E00D6E8E2 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F629F2C97F32E00D6E8E2 /* GalleryViewModel.swift */; };
+		AF8F62A22C97F38D00D6E8E2 /* PhotoThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62A12C97F38D00D6E8E2 /* PhotoThumbnail.swift */; };
+		AF8F62A42C97F67A00D6E8E2 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62A32C97F67A00D6E8E2 /* GalleryView.swift */; };
+		AF8F62A62C98123600D6E8E2 /* ImageLoadingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62A52C98123600D6E8E2 /* ImageLoadingService.swift */; };
+		AF8F62A82C98181E00D6E8E2 /* SelectedPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62A72C98181E00D6E8E2 /* SelectedPhotoView.swift */; };
+		AF8F62AA2C981E2600D6E8E2 /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62A92C981E2600D6E8E2 /* NavigationDestination.swift */; };
+		AF8F62AC2C981F9100D6E8E2 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62AB2C981F9100D6E8E2 /* ResultView.swift */; };
+		AF8F62AE2C983ED500D6E8E2 /* LoadingFlipCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62AD2C983ED500D6E8E2 /* LoadingFlipCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +59,16 @@
 		AF8F62902C9707E500D6E8E2 /* ColorInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfoView.swift; sourceTree = "<group>"; };
 		AF8F62922C97083C00D6E8E2 /* ColorInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfoCardView.swift; sourceTree = "<group>"; };
 		AF8F62952C970E1F00D6E8E2 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		AF8F62972C97372500D6E8E2 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		AF8F629B2C97C74E00D6E8E2 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		AF8F629F2C97F32E00D6E8E2 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		AF8F62A12C97F38D00D6E8E2 /* PhotoThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoThumbnail.swift; sourceTree = "<group>"; };
+		AF8F62A32C97F67A00D6E8E2 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		AF8F62A52C98123600D6E8E2 /* ImageLoadingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingService.swift; sourceTree = "<group>"; };
+		AF8F62A72C98181E00D6E8E2 /* SelectedPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPhotoView.swift; sourceTree = "<group>"; };
+		AF8F62A92C981E2600D6E8E2 /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
+		AF8F62AB2C981F9100D6E8E2 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		AF8F62AD2C983ED500D6E8E2 /* LoadingFlipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFlipCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +133,13 @@
 		AF8F62692C91525400D6E8E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF8F629A2C97C70C00D6E8E2 /* GalleryView */,
 				AF8F62952C970E1F00D6E8E2 /* StackView.swift */,
 				AF8F628D2C97043500D6E8E2 /* Component */,
 				AF8F625B2C9135AA00D6E8E2 /* ContentView.swift */,
+				AF8F62A92C981E2600D6E8E2 /* NavigationDestination.swift */,
+				AF8F62AB2C981F9100D6E8E2 /* ResultView.swift */,
+				AF8F62AD2C983ED500D6E8E2 /* LoadingFlipCard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,8 +188,22 @@
 				AF8F62832C96B0A900D6E8E2 /* PhotoFrameView.swift */,
 				AF8F62902C9707E500D6E8E2 /* ColorInfoView.swift */,
 				AF8F62922C97083C00D6E8E2 /* ColorInfoCardView.swift */,
+				AF8F62972C97372500D6E8E2 /* FloatingButton.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		AF8F629A2C97C70C00D6E8E2 /* GalleryView */ = {
+			isa = PBXGroup;
+			children = (
+				AF8F629B2C97C74E00D6E8E2 /* Photo.swift */,
+				AF8F629F2C97F32E00D6E8E2 /* GalleryViewModel.swift */,
+				AF8F62A12C97F38D00D6E8E2 /* PhotoThumbnail.swift */,
+				AF8F62A32C97F67A00D6E8E2 /* GalleryView.swift */,
+				AF8F62A52C98123600D6E8E2 /* ImageLoadingService.swift */,
+				AF8F62A72C98181E00D6E8E2 /* SelectedPhotoView.swift */,
+			);
+			path = GalleryView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,23 +276,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF8F62752C9165EA00D6E8E2 /* ObjectDetectionManager.swift in Sources */,
+				AF8F62A02C97F32E00D6E8E2 /* GalleryViewModel.swift in Sources */,
+				AF8F62AC2C981F9100D6E8E2 /* ResultView.swift in Sources */,
 				AF8F626F2C91544300D6E8E2 /* ColorInfo.swift in Sources */,
 				AF8F62882C96CDF800D6E8E2 /* ImageData.swift in Sources */,
 				AF8F62792C95E35900D6E8E2 /* ColorExtractionManager.swift in Sources */,
 				AF8F625C2C9135AA00D6E8E2 /* ContentView.swift in Sources */,
+				AF8F629C2C97C74E00D6E8E2 /* Photo.swift in Sources */,
 				AF8F625A2C9135AA00D6E8E2 /* PaletteMApp.swift in Sources */,
 				AF8F627E2C95EA1B00D6E8E2 /* Color+Extensions.swift in Sources */,
+				AF8F62A22C97F38D00D6E8E2 /* PhotoThumbnail.swift in Sources */,
 				AF8F62772C93C27D00D6E8E2 /* YOLOv3Int8LUT.mlmodel in Sources */,
 				AF8F62962C970E1F00D6E8E2 /* StackView.swift in Sources */,
 				AF8F62912C9707E500D6E8E2 /* ColorInfoView.swift in Sources */,
+				AF8F62A82C98181E00D6E8E2 /* SelectedPhotoView.swift in Sources */,
+				AF8F62AE2C983ED500D6E8E2 /* LoadingFlipCard.swift in Sources */,
 				AF8F62802C95EAA500D6E8E2 /* UIColor+Extensions.swift in Sources */,
 				AF8F627C2C95E3C500D6E8E2 /* UIImage+Extensions.swift in Sources */,
 				AF8F62732C9163CF00D6E8E2 /* DetectedObject.swift in Sources */,
+				AF8F62A42C97F67A00D6E8E2 /* GalleryView.swift in Sources */,
 				AF8F62932C97083C00D6E8E2 /* ColorInfoCardView.swift in Sources */,
 				AF8F62712C91551700D6E8E2 /* ColorExtractorViewModel.swift in Sources */,
 				AF8F628A2C96D31200D6E8E2 /* PreviewContainer.swift in Sources */,
 				AF8F628F2C97048C00D6E8E2 /* FlipCard.swift in Sources */,
+				AF8F62AA2C981E2600D6E8E2 /* NavigationDestination.swift in Sources */,
 				AF8F62842C96B0A900D6E8E2 /* PhotoFrameView.swift in Sources */,
+				AF8F62A62C98123600D6E8E2 /* ImageLoadingService.swift in Sources */,
+				AF8F62982C97372500D6E8E2 /* FloatingButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +439,7 @@
 				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진에 접근하기 위해 귀하의 허가가 필요합니다. 앱에서 사용할 사진을 선택할 수 있습니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +473,7 @@
 				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진에 접근하기 위해 귀하의 허가가 필요합니다. 앱에서 사용할 사진을 선택할 수 있습니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

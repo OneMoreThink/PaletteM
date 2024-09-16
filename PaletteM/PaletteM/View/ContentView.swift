@@ -9,18 +9,66 @@ import SwiftUI
 
 // MARK: - View
 struct ContentView: View {
-    @StateObject private var viewModel = ColorExtractorViewModel()
-    @State private var showingAlert = false
+    
+    @State private var isShowSelectGallery = false
     
     var body: some View {
         
         NavigationStack{
-            
-            VStack{
-                StackView()
+            ZStack{
+                
+                LinearGradient(
+                    gradient: Gradient(colors: [
+                        .softPink, .lightPeach, .mintGreen, .skyBlue
+                    ]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+                
+                VStack(spacing: 8){
+                    Text("PaletteM")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color.softCharcoal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 20)
+                        .padding(.top, 24)
                     
+                    StackView()
+                    
+                }
+                .padding(.top, 30)
+                .ignoresSafeArea()
             }
-            .navigationTitle("PaletteM")
+            .fullScreenCover(isPresented: $isShowSelectGallery) {
+                GalleryView(isShowSelectGallery: $isShowSelectGallery)
+            }
+        }
+        .overlay(alignment: .bottom){
+            FloatingButton{
+                FloatingAction(symbol: "camera", background: .pastelRed) {
+                    
+                }
+                FloatingAction(symbol: "photo", background: .pastelGreen){
+                    isShowSelectGallery = true 
+                }
+                FloatingAction(symbol: "square.and.arrow.up", background: .pastelBlue ) {
+                    
+                }
+            } label: { isExpanded in
+                Image(systemName: "plus")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color.softBeige)
+                    .rotationEffect(.init(degrees: isExpanded ? 45 : 0))
+                    .scaleEffect(1.02)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.pastelYellow, in: .circle)
+                    /// Scaling Effect When Expaned
+                    .scaleEffect(isExpanded ? 0.9 : 1)
+            }
+            
         }
         
     }

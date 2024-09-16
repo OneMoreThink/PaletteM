@@ -13,11 +13,13 @@ class ImageData {
     var id: UUID
     var imageData: Data
     var colorInfos: [ColorInfo]
+    var createdAt: Date
     
     init(id: UUID = UUID(), imageData: Data, colorInfos: [ColorInfo] = []) {
         self.id = id
         self.imageData = imageData
         self.colorInfos = colorInfos
+        self.createdAt = Date() 
     }
 }
 
