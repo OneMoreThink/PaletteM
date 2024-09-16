@@ -9,7 +9,8 @@ import SwiftUI
 
 // MARK: - View
 struct ContentView: View {
-    @StateObject private var viewModel = ColorExtractorViewModel()
+    
+    @State private var isShowSelectGallery = false
     
     var body: some View {
         
@@ -43,6 +44,9 @@ struct ContentView: View {
                 .padding(.top, 30)
                 .ignoresSafeArea()
             }
+            .fullScreenCover(isPresented: $isShowSelectGallery) {
+                GalleryView(isShowSelectGallery: $isShowSelectGallery)
+            }
         }
         .overlay(alignment: .bottom){
             FloatingButton{
@@ -50,7 +54,7 @@ struct ContentView: View {
                     
                 }
                 FloatingAction(symbol: "photo", background: .pastelGreen){
-                    
+                    isShowSelectGallery = true 
                 }
                 FloatingAction(symbol: "square.and.arrow.up", background: .pastelBlue ) {
                     
@@ -67,8 +71,6 @@ struct ContentView: View {
                     /// Scaling Effect When Expaned
                     .scaleEffect(isExpanded ? 0.9 : 1)
             }
-         
-
             
         }
         
