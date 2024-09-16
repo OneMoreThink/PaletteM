@@ -14,12 +14,62 @@ struct ContentView: View {
     var body: some View {
         
         NavigationStack{
-            
-            VStack{
-                StackView()
+            ZStack{
+                
+                LinearGradient(
+                    gradient: Gradient(colors: [
+                        Color(red: 1.0, green: 0.714, blue: 0.757),
+                        Color(red: 1.0, green: 0.878, blue: 0.675),
+                        Color(red: 0.741, green: 0.918, blue: 0.882),
+                        Color(red: 0.686, green: 0.843, blue: 0.953)
+                    ]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+                
+                VStack(spacing: 8){
+                    Text("PaletteM")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color.softCharcoal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 20)
+                        .padding(.top, 24)
                     
+                    StackView()
+                    
+                }
+                .padding(.top, 30)
+                .ignoresSafeArea()
             }
-            .navigationTitle("PaletteM")
+        }
+        .overlay(alignment: .bottom){
+            FloatingButton{
+                FloatingAction(symbol: "camera", background: .pastelRed) {
+                    
+                }
+                FloatingAction(symbol: "photo", background: .pastelGreen){
+                    
+                }
+                FloatingAction(symbol: "square.and.arrow.up", background: .pastelBlue ) {
+                    
+                }
+            } label: { isExpanded in
+                Image(systemName: "plus")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color.softBeige)
+                    .rotationEffect(.init(degrees: isExpanded ? 45 : 0))
+                    .scaleEffect(1.02)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.pastelYellow, in: .circle)
+                    /// Scaling Effect When Expaned
+                    .scaleEffect(isExpanded ? 0.9 : 1)
+            }
+         
+
+            
         }
         
     }

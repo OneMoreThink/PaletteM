@@ -52,4 +52,21 @@ extension Color: Codable {
         let uiColor = UIColor(self)
         return uiColor.toRGBString()
     }
+    
+    static let pastelRed = Color(red: 255/255, green: 209/255, blue: 220/255)
+    static let pastelGreen = Color(red: 203/255, green: 241/255, blue: 203/255)
+    static let pastelBlue = Color(red: 173/255, green: 216/255, blue: 230/255)
+    static let pastelYellow = Color(red: 253/255, green: 253/255, blue: 150/255)
+    static let softCharcoal = Color(red: 54/255, green: 69/255, blue: 79/255)
+    // 크림색 오프화이트
+       static let creamyWhite = Color(red: 253/255, green: 252/255, blue: 245/255)
+       
+       // 따뜻한 오프화이트
+       static let warmOffWhite = Color(red: 255/255, green: 253/255, blue: 248/255)
+       
+       // 차가운 오프화이트
+       static let coolOffWhite = Color(red: 248/255, green: 250/255, blue: 252/255)
+       
+       // 매우 연한 베이지
+       static let softBeige = Color(red: 245/255, green: 245/255, blue: 237/255)
 }

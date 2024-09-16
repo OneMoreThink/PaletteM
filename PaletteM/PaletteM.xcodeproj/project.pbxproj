@@ -26,6 +26,7 @@
 		AF8F62912C9707E500D6E8E2 /* ColorInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62902C9707E500D6E8E2 /* ColorInfoView.swift */; };
 		AF8F62932C97083C00D6E8E2 /* ColorInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62922C97083C00D6E8E2 /* ColorInfoCardView.swift */; };
 		AF8F62962C970E1F00D6E8E2 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62952C970E1F00D6E8E2 /* StackView.swift */; };
+		AF8F62982C97372500D6E8E2 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62972C97372500D6E8E2 /* FloatingButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		AF8F62902C9707E500D6E8E2 /* ColorInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfoView.swift; sourceTree = "<group>"; };
 		AF8F62922C97083C00D6E8E2 /* ColorInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorInfoCardView.swift; sourceTree = "<group>"; };
 		AF8F62952C970E1F00D6E8E2 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		AF8F62972C97372500D6E8E2 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				AF8F62832C96B0A900D6E8E2 /* PhotoFrameView.swift */,
 				AF8F62902C9707E500D6E8E2 /* ColorInfoView.swift */,
 				AF8F62922C97083C00D6E8E2 /* ColorInfoCardView.swift */,
+				AF8F62972C97372500D6E8E2 /* FloatingButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				AF8F628A2C96D31200D6E8E2 /* PreviewContainer.swift in Sources */,
 				AF8F628F2C97048C00D6E8E2 /* FlipCard.swift in Sources */,
 				AF8F62842C96B0A900D6E8E2 /* PhotoFrameView.swift in Sources */,
+				AF8F62982C97372500D6E8E2 /* FloatingButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
