@@ -19,10 +19,7 @@ struct ContentView: View {
                 
                 LinearGradient(
                     gradient: Gradient(colors: [
-                        Color(red: 1.0, green: 0.714, blue: 0.757),
-                        Color(red: 1.0, green: 0.878, blue: 0.675),
-                        Color(red: 0.741, green: 0.918, blue: 0.882),
-                        Color(red: 0.686, green: 0.843, blue: 0.953)
+                        .softPink, .lightPeach, .mintGreen, .skyBlue
                     ]),
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing
