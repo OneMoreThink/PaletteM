@@ -27,6 +27,12 @@ class GalleryViewModel: ObservableObject {
         }
     }
     
+    func clear(){
+        photos = []
+        selectedImage = nil
+        selectedImage = nil 
+    }
+    
     func selectPhoto(_ photo: Photo) {
         self.selectedPhoto = photo
         loadSelectedImage()

@@ -63,4 +63,7 @@ extension Color: Codable {
     static let lightPeach = Color(red: 1.0, green: 0.878, blue: 0.675)
     static let mintGreen = Color(red: 0.741, green: 0.918, blue: 0.882)
     static let skyBlue = Color(red: 0.686, green: 0.843, blue: 0.953)
+    static let lightBeige = Color(red: 0.96, green: 0.87, blue: 0.70)
+    static let darkBeige = Color(red: 0.90, green: 0.75, blue: 0.50)
+
 }

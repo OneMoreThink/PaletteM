@@ -29,7 +29,6 @@ class ColorExtractorViewModel: ObservableObject {
     
     
     /// 이미지 선택 메서드
-    //MARK: 이미지 선택 로직과 선택된 이미지를 실제로 분석처리를 요청하는 로직과 분리 필요 
     func selectImage(_ image: UIImage) {
         selectedImage = image
         detectObjects(in: image)
@@ -42,6 +41,7 @@ class ColorExtractorViewModel: ObservableObject {
         detectedObjects = []
         detectionError = nil
         imageWithDetectedObjects = nil
+        distinctColors = []
         isProcessing = false
         
     }
@@ -56,7 +56,7 @@ class ColorExtractorViewModel: ObservableObject {
                 case .success(let objects):
                     self?.detectedObjects = objects
                     // MARK: 객체가 감지가 완료된 시점이후 박스 표시
-                    self?.drawDetectedObjectsOnImage()
+                    //self?.drawDetectedObjectsOnImage()
                     
                     // 객체가 감지가 완료된 이후에 색생 추출을 수행
                     self?.extractColors(from: image)
@@ -68,14 +68,12 @@ class ColorExtractorViewModel: ObservableObject {
                     // 객체가 감지에 실패해도 색상 추출을 시도
                     self?.extractColors(from: image)
                 }
-                self?.isProcessing = false
             }
         }
     }
     
     /// 색상 추출 프로세스 구현
     private func extractColors(from image: UIImage) {
-        isProcessing = true
         
         // 레이블별 가중치를 정의합니다.
         let labelWeights: [String: Double] = [
@@ -85,12 +83,12 @@ class ColorExtractorViewModel: ObservableObject {
         
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             guard let self = self else { return }
-            let colors = self.colorExtractionManager.extractColors(from: image, detectedObjects: self.detectedObjects, labelWeights: labelWeights)
-            
+            let extractedColor = self.colorExtractionManager.extractColors(from: image, detectedObjects: self.detectedObjects, labelWeights: labelWeights)
+            let distinctedColor = self.colorExtractionManager.selectDistinctColors(from: extractedColor)
             DispatchQueue.main.async {
-                self.extractedColors = colors
+                self.extractedColors = extractedColor
                 // 최대 구분색 추가
-                self.distinctColors = self.colorExtractionManager.selectDistinctColors(from: colors)
+                self.distinctColors = distinctedColor
                 self.isProcessing = false
             }
         }

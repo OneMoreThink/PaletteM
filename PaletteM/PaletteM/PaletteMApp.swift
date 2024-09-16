@@ -12,12 +12,14 @@ import SwiftData
 struct PaletteMApp: App {
     
     @StateObject var galleryVm = GalleryViewModel()
+    @StateObject var colorExtractor = ColorExtractorViewModel()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
         .environmentObject(galleryVm)
+        .environmentObject(colorExtractor)
         .modelContainer(for: ImageData.self)
     }
 }

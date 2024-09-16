@@ -13,9 +13,7 @@ struct StackView: View {
     // View Properties
     @State private var isRotationEnabled: Bool = true
     @State private var showsIndicator: Bool = false
-    
-    @Query private var items: [ImageData]
-    @Environment(\.modelContext) private var context
+    @Query(sort: \ImageData.createdAt, order: .reverse) private var items: [ImageData]
     
     var body: some View {
         NavigationStack{

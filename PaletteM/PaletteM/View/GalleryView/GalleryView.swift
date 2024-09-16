@@ -10,6 +10,8 @@ import SwiftUI
 struct GalleryView: View {
     
     @EnvironmentObject var viewModel: GalleryViewModel
+    @EnvironmentObject var colorExtractor: ColorExtractorViewModel
+    @State private var path: [NavigationDestination] = []
     @Binding var isShowSelectGallery: Bool
     
     let columns = [
@@ -19,7 +21,7 @@ struct GalleryView: View {
     ]
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             VStack(spacing: 0) {
                 
                 SelectedPhotoView(viewModel: viewModel, size: UIScreen.main.bounds.width)
@@ -43,20 +45,15 @@ struct GalleryView: View {
                         }
                     }
                 }
+            }
+            .navigationDestination(for: NavigationDestination.self) { destination in
+                switch  destination {
+                case .resultView:
+                    ResultView(path: $path, isShowSelectGallery: $isShowSelectGallery)
+                }
                 
             }
             .toolbar {
-                ToolbarItem(placement:.topBarTrailing) {
-                    
-                    Button(action: {
-                        print("Selected photo: \(viewModel.selectedPhoto?.id ?? "None")")
-                    }, label: {
-                        Text("선택")
-                            .fontWeight(.semibold)
-                    })
-                    .disabled(viewModel.selectedPhoto == nil)
-                 
-                }
                 
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: {
@@ -67,8 +64,23 @@ struct GalleryView: View {
                             .foregroundStyle(Color.softBeige)
                     })
                 }
+                
+                ToolbarItem(placement:.topBarTrailing) {
+                    
+                    Button(action: {
+                        if let selectedImage = viewModel.selectedImage{
+                            colorExtractor.selectImage(selectedImage)
+                        }
+                        path.append(.resultView)
+                        
+                    }, label: {
+                        Text("선택")
+                            .fontWeight(.semibold)
+                    })
+                    .disabled(viewModel.selectedPhoto == nil)
+                 
+                }
             }
-            
         }
         .preferredColorScheme(.dark)
         .ignoresSafeArea()
@@ -76,6 +88,9 @@ struct GalleryView: View {
             if viewModel.photos.isEmpty {
                 viewModel.fetchPhotos()
             }
+        }
+        .onDisappear{
+            viewModel.clear()  
         }
     }
 }
