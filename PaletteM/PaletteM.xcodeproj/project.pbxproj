@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2D6D912CC73ACC000A2C76 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D6D902CC73ACC000A2C76 /* CameraView.swift */; };
+		AF2D6D932CC73ADF000A2C76 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D6D922CC73ADF000A2C76 /* CameraPreview.swift */; };
+		AF2D6D952CC73BE6000A2C76 /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D6D942CC73BE6000A2C76 /* CapturedImageView.swift */; };
+		AF2D6D972CC73C1A000A2C76 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D6D962CC73C1A000A2C76 /* CameraViewModel.swift */; };
+		AF2D6D992CC73E4F000A2C76 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D6D982CC73E4F000A2C76 /* PreviewView.swift */; };
 		AF8F625A2C9135AA00D6E8E2 /* PaletteMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F62592C9135AA00D6E8E2 /* PaletteMApp.swift */; };
 		AF8F625C2C9135AA00D6E8E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F625B2C9135AA00D6E8E2 /* ContentView.swift */; };
 		AF8F625E2C9135AC00D6E8E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8F625D2C9135AC00D6E8E2 /* Assets.xcassets */; };
@@ -39,6 +44,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF2D6D902CC73ACC000A2C76 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		AF2D6D922CC73ADF000A2C76 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		AF2D6D942CC73BE6000A2C76 /* CapturedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedImageView.swift; sourceTree = "<group>"; };
+		AF2D6D962CC73C1A000A2C76 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		AF2D6D982CC73E4F000A2C76 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		AF8F62562C9135AA00D6E8E2 /* PaletteM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaletteM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8F62592C9135AA00D6E8E2 /* PaletteMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteMApp.swift; sourceTree = "<group>"; };
 		AF8F625B2C9135AA00D6E8E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +92,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF2D6D8F2CC739BB000A2C76 /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				AF2D6D902CC73ACC000A2C76 /* CameraView.swift */,
+				AF2D6D922CC73ADF000A2C76 /* CameraPreview.swift */,
+				AF2D6D942CC73BE6000A2C76 /* CapturedImageView.swift */,
+				AF2D6D962CC73C1A000A2C76 /* CameraViewModel.swift */,
+				AF2D6D982CC73E4F000A2C76 /* PreviewView.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
 		AF8F624D2C9135AA00D6E8E2 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +155,7 @@
 		AF8F62692C91525400D6E8E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF2D6D8F2CC739BB000A2C76 /* CameraView */,
 				AF8F629A2C97C70C00D6E8E2 /* GalleryView */,
 				AF8F62952C970E1F00D6E8E2 /* StackView.swift */,
 				AF8F628D2C97043500D6E8E2 /* Component */,
@@ -280,15 +303,20 @@
 				AF8F62AC2C981F9100D6E8E2 /* ResultView.swift in Sources */,
 				AF8F626F2C91544300D6E8E2 /* ColorInfo.swift in Sources */,
 				AF8F62882C96CDF800D6E8E2 /* ImageData.swift in Sources */,
+				AF2D6D972CC73C1A000A2C76 /* CameraViewModel.swift in Sources */,
 				AF8F62792C95E35900D6E8E2 /* ColorExtractionManager.swift in Sources */,
 				AF8F625C2C9135AA00D6E8E2 /* ContentView.swift in Sources */,
 				AF8F629C2C97C74E00D6E8E2 /* Photo.swift in Sources */,
 				AF8F625A2C9135AA00D6E8E2 /* PaletteMApp.swift in Sources */,
 				AF8F627E2C95EA1B00D6E8E2 /* Color+Extensions.swift in Sources */,
+				AF2D6D952CC73BE6000A2C76 /* CapturedImageView.swift in Sources */,
 				AF8F62A22C97F38D00D6E8E2 /* PhotoThumbnail.swift in Sources */,
 				AF8F62772C93C27D00D6E8E2 /* YOLOv3Int8LUT.mlmodel in Sources */,
+				AF2D6D992CC73E4F000A2C76 /* PreviewView.swift in Sources */,
 				AF8F62962C970E1F00D6E8E2 /* StackView.swift in Sources */,
+				AF2D6D912CC73ACC000A2C76 /* CameraView.swift in Sources */,
 				AF8F62912C9707E500D6E8E2 /* ColorInfoView.swift in Sources */,
+				AF2D6D932CC73ADF000A2C76 /* CameraPreview.swift in Sources */,
 				AF8F62A82C98181E00D6E8E2 /* SelectedPhotoView.swift in Sources */,
 				AF8F62AE2C983ED500D6E8E2 /* LoadingFlipCard.swift in Sources */,
 				AF8F62802C95EAA500D6E8E2 /* UIColor+Extensions.swift in Sources */,
@@ -439,7 +467,8 @@
 				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진에 접근하기 위해 귀하의 허가가 필요합니다. 앱에서 사용할 사진을 선택할 수 있습니다.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진 촬영을 위해 카메라 사용에 대한 동의가 필요합니다. ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진 선택을 위해 사진첩 접근에 대한 동의가 필요합니다.  ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -473,7 +502,8 @@
 				DEVELOPMENT_TEAM = ZWTS2P7AH7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진에 접근하기 위해 귀하의 허가가 필요합니다. 앱에서 사용할 사진을 선택할 수 있습니다.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진 촬영을 위해 카메라 사용에 대한 동의가 필요합니다. ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진 선택을 위해 사진첩 접근에 대한 동의가 필요합니다.  ";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
