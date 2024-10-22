@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var isShowSelectGallery = false
+    @State private var isShowCamera = false
     
     var body: some View {
         
@@ -44,11 +45,14 @@ struct ContentView: View {
             .fullScreenCover(isPresented: $isShowSelectGallery) {
                 GalleryView(isShowSelectGallery: $isShowSelectGallery)
             }
+            .fullScreenCover(isPresented: $isShowCamera) {
+                CameraView(isShowView: $isShowCamera)
+            }
         }
         .overlay(alignment: .bottom){
             FloatingButton{
                 FloatingAction(symbol: "camera", background: .pastelRed) {
-                    
+                    isShowCamera = true
                 }
                 FloatingAction(symbol: "photo", background: .pastelGreen){
                     isShowSelectGallery = true 
